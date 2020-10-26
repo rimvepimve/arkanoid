@@ -1,5 +1,3 @@
-package arkanoid;
-
 import java.io.IOException;
 
 public class Arkanoid {
@@ -39,13 +37,13 @@ public class Arkanoid {
   }
 
   private static void movePaddleLeft(){
-    if(playground[paddleY][paddleX-1] == 0)
-      paddleX--;
+    if(playground[paddleY][paddleX-2] == 0)
+      paddleX = paddleX - 2;
   }
 
   private static void movePaddleRight(){
-    if(playground[paddleY][paddleX+8] == 0)
-      paddleX++;
+    if(playground[paddleY][paddleX+9] == 0)
+      paddleX = paddleX  + 2;
   }
 
 
@@ -168,5 +166,4 @@ public class Arkanoid {
     }
     System.out.println("GameOver. Your score: " + score);
   }
-
 }

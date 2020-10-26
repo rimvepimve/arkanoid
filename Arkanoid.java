@@ -133,6 +133,10 @@ public class Arkanoid {
 
     boolean gameOver = false;
     while(!gameOver) {
+      if(score == 24) {
+        System.out.println("You Won!");
+        gameOver = true;
+      }
       setPaddleToPlayground();
       printPlayground();
       if(isBrickHitted()){

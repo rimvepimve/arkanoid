@@ -99,9 +99,21 @@ public class Arkanoid {
       ballDx = 1;
       return;
     }
-    if(playground[ballY][ballX] > 5 || playground[ballY][ballX] == 3) {
+    if(playground[ballY][ballX] == 3) {
       ballDy = -1 * ballDy;
       return;
+    }
+    if(playground[ballY][ballX] > 5){
+      if(ballDx > 0 && playground[ballY][ballX-1] == 0){
+        ballDx = -1 * ballDx;
+        return;
+      } else if(ballDx < 0 && playground[ballY][ballX+1] == 0) {
+        ballDx = -1 * ballDx;
+        return;
+      } else {
+        ballDy = -1 * ballDy;
+        return;
+      }
     }
     if(playground[ballY][ballX] == 1) {
       ballDx = -1 * ballDx;
